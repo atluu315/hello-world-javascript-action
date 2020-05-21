@@ -18,14 +18,18 @@ jobs:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - name: Checkout
       uses: actions/checkout@v2
+      
+    #Install Katalon Agent as a Node.js library
+    - name: Install Katalon Agent
+      run: npm install https://github.com/katalon-studio/katalon-agent
 
     # Runs the action
-    - name: Hello world action step
-      uses: ./ #Uses an action in the root directory
-      id: hello
-      with: 
-        who-to-greet: 'Mona the Octocat'
+    #- name: Hello world action step
+    #  uses: ./ #Uses an action in the root directory
+    #  id: hello
+    #  with: 
+    #   who-to-greet: 'Mona the Octocat'
 
     # Uses the output from the 'hello' step
-    - name: Get the output time
-      run: echo "The time was ${{ steps.hello.outputs.time }}"
+    #- name: Get the output time
+    #  run: echo "The time was ${{ steps.hello.outputs.time }}"
