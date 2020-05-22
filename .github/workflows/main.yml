@@ -22,6 +22,9 @@ jobs:
     #Install Katalon Agent as a Node.js library
     - name: Install Katalon Agent
       run: npm install https://github.com/katalon-studio/katalon-agent
+    
+    - name: Run remote-downloader.js
+      run: cd node_modules/katalon-cli/src; node remote-downloader.js
 
     # Runs the action
     #- name: Hello world action step
