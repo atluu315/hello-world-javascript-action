@@ -23,9 +23,13 @@ jobs:
     - name: Install packages
       run: npm install --save katalon-studio/katalon-agent#v1.4.0
     
+    #Install Katalon Studio
+    - name: Install Katalon Studio
+      run: cd node_modules/katalon-cli/src; node remote-downloader.js  
+    
     #Runs Katalon Studio Action
-    - name: Katalon Studio Action Step
-      uses: ./  #Uses an action in the root directory
+    #- name: Katalon Studio Action Step
+    #  uses: ./  #Uses an action in the root directory
 
     # Runs the action
     #- name: Hello world action step
