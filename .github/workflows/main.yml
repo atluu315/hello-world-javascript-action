@@ -19,12 +19,13 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v2
       
-    #Install Katalon Agent as a Node.js library
-    - name: Install Katalon Agent
-      run: npm install https://github.com/katalon-studio/katalon-agent
+    #Install packages
+    - name: Install packages
+      run: npm install --save katalon-studio/katalon-agent#v1.4.0
     
-    - name: Run remote-downloader.js
-      run: cd node_modules/katalon-cli/src; node remote-downloader.js
+    #Runs Katalon Studio Action
+    - name: Katalon Studio Action Step
+      uses: ./  #Uses an action in the root directory
 
     # Runs the action
     #- name: Hello world action step
