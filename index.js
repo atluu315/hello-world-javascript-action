@@ -23,7 +23,7 @@ const dirPath = core.cwd();
 
 try 
 {
-	new KatalonCommandExecutor(
+	//new KatalonCommandExecutor(
 	comexec.execute(defaultLogger, dirPath);
 } catch (error)
 {
