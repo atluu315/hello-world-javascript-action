@@ -16,8 +16,8 @@ try
 	core.setFailed(error.message);
 }*/
 
-const { KatalonCommandExecutor, GenericCommandExecutor } = require('./command-executor.js');
-const defaultLogger = require('./logger');
+const { KatalonCommandExecutor, GenericCommandExecutor } = require('./node_modules/katalon-cli/src/command-executor.js');
+const defaultLogger = require('./node_modules/katalon-cli/src/logger');
 const core = require('@actions/core');
 const dirPath = core.cwd();
 
