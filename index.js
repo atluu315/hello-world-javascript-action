@@ -19,12 +19,12 @@ try
 const { KatalonCommandExecutor, GenericCommandExecutor } = require('./node_modules/katalon-cli/src/command-executor.js');
 const defaultLogger = require('./node_modules/katalon-cli/src/logger');
 const core = require('@actions/core');
-const dirPath = core.cwd();
+const dirPath = process.cwd();
 
 try 
 {
 	//new KatalonCommandExecutor(
-	comexec.execute(defaultLogger, dirPath);
+	KatalonCommandExecutor.execute(defaultLogger, dirPath);
 } catch (error)
 {
 	core.setFailed(error.message);
